@@ -16,6 +16,8 @@ var asteroid8table = document.getElementById('asteroid8table');
 var asteroid9table = document.getElementById('asteroid9table');
 var asteroid10table = document.getElementById('asteroid10table');
 
+var infoModal = document.getElementById('info-modal');
+
 
 function mainTable(asteroidTableData) {
   console.log(asteroidTableData);
@@ -41,27 +43,74 @@ function mainTable(asteroidTableData) {
   asteroid9table.textContent = asteroid9Object.name;
   asteroid10table.textContent = asteroid10Object.name;
 
-  asteroid1table.addEventListener('click', fillInfoModal());
+  asteroid1table.addEventListener('click', fillInfoModal);
+  asteroid2table.addEventListener('click', fillInfoModal);
+  asteroid3table.addEventListener('click', fillInfoModal);
+  asteroid4table.addEventListener('click', fillInfoModal);
+  asteroid5table.addEventListener('click', fillInfoModal);
+  asteroid6table.addEventListener('click', fillInfoModal);
+  asteroid7table.addEventListener('click', fillInfoModal);
+  asteroid8table.addEventListener('click', fillInfoModal);
+  asteroid9table.addEventListener('click', fillInfoModal);
+  asteroid10table.addEventListener('click', fillInfoModal);
+
 
   var asteroidObjectsArray = [asteroid1Object, asteroid2Object, asteroid3Object, asteroid4Object, asteroid5Object, asteroid6Object, asteroid7Object, asteroid8Object, asteroid9Object, asteroid10Object];
   var asteroidsTableArray = [asteroid1table, asteroid2table, asteroid3table, asteroid4table, asteroid5table, asteroid6table, asteroid7table, asteroid8table, asteroid9table, asteroid10table];
+  var asteroidName = document.getElementById('asteroid-name');
+  var ortibalDiagramLink = document.getElementById('orbital-diagram-link');
+  var yesOrNo = document.getElementById('yes-or-no');
+  var asteroidDanger = document.getElementById('asteroid-danger');
+  var spongebob = document.getElementById('spongebob');
+  var backButton = document.getElementById("backButton");
+  backButton.addEventListener('click', goBack);
 
-  var infoModal = document.getElementById('info-modal');
+  function goBack() {
+    infoModal.classList.add('hidden');
+    clearEntries();
+  }
+
+  function clearEntries() {
+    ortibalDiagramLink.textContent = '';
+    asteroidName.textContent = '';
+    asteroidDiameterDataMin.textContent = '';
+    asteroidDiameterDataMax.textContent = '';
+    firstObservationData.textContent = '';
+    lastObservationData.textContent = '';
+    relativeVelocityData.textContent = '';
+    missDistanceData.textContent = '';
+    yesOrNo.textContent = '';
+    spongebob.classList.add('hidden');
+    asteroidDanger.classList.add('hidden');
+  }
+
 
     function fillInfoModal() {
-      infoModal.classList.remove('hidden');
-      // for (var i = 0; i < asteroidsTableArray.length; i++) {
-        if (event.target === asteroidsTableArray[i]) {
-          asteroidDiameterDataMin.append(asteroidObjectsArray[i].estimated_diameter.kilometers.estimated_diameter_min);
-          asteroidDiameterDataMax.append(asteroidObjectsArray[i].estimated_diameter.kilometers.estimated_diameter_max);
+      for (var i = 0; i < asteroidsTableArray.length; i++) {
+        if (event.currentTarget === asteroidsTableArray[i]) {
+          ortibalDiagramLink.append(asteroidObjectsArray[i].nasa_jpl_url);
+          asteroidName.append(asteroidObjectsArray[i].name);
+          asteroidDiameterDataMin.append(asteroidObjectsArray[i].estimated_diameter.kilometers.estimated_diameter_min + " Kilometers");
+          asteroidDiameterDataMax.append(asteroidObjectsArray[i].estimated_diameter.kilometers.estimated_diameter_max + " Kilometers");
           firstObservationData.append(asteroidObjectsArray[i].orbital_data.first_observation_date);
           lastObservationData.append(asteroidObjectsArray[i].orbital_data.last_observation_date);
-          relativeVelocityData.append(asteroidObjectsArray[i].close_approach_data.firstChild.relative_velocity.kilometers_per_hour);
-          missDistanceData.append(asteroidObjectsArray[i].close_approach_data.firstChild.miss_distance.kilometers);
+          relativeVelocityData.append(asteroidObjectsArray[i].close_approach_data[0].relative_velocity.kilometers_per_hour + " Km/hr");
+          missDistanceData.append(asteroidObjectsArray[i].close_approach_data[0].miss_distance.kilometers + " Kilometers");
+          if (asteroidObjectsArray[i].is_potentially_hazardous_asteroid === true) {
+            yesOrNo.textContent = "Yes!";
+            asteroidDanger.classList.remove('hidden');
+
+          } else {
+            yesOrNo.textContent = "No!"
+            spongebob.classList.remove('hidden');
+          }
         }
-      // }
+      }
+      infoModal.classList.remove('hidden');
     }
 }
+
+
 
 // function fillAsteroidPage() {
 

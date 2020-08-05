@@ -37,8 +37,10 @@
       </div>
 
       <div class="info-modal hidden" id="info-modal">
-        <h2 class="orbital-diagram-link">Orbital Diagram</h2>
-          <table id="asteroidDataTable">
+        <p id="asteroid-name" class="asteroid-name"></p>
+        <p class="orbital-diagram-link">Orbital Diagram:</p>
+        <p id="orbital-diagram-link"></p>
+          <table id="asteroidDataTable" class="asteroidDataTable">
             <tr>
               <td>Asteroid Diameter Min</td>
               <td id="asteroid-diameter-data-min"></td>
@@ -64,7 +66,12 @@
               <td id="miss-distance-data"></td>
             </tr>
           </table>
-      </div>
+          <p>Is this asteroid hazardous?</p>
+          <p id="yes-or-no"></p>
+          <img src="images/peopleRunningFromAsteroid.jpg" alt="People running from an asteroid" class="asteroid-danger-image hidden" id="asteroid-danger"/>
+          <img src="images/spongebob chillin.jpg" alt="spongebob and friends chillin out" class="spongebob hidden" id="spongebob"/>
+          <button class="back-button" id="backButton">Back</button>
+        </div>
 
 
 
