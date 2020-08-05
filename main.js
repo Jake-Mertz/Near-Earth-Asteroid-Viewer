@@ -3,7 +3,7 @@
 
 var today = new Date();
 var currentDay = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-console.log(currentDay);
+// console.log(currentDay);
 
 var container = document.getElementById('container');
 
@@ -18,38 +18,25 @@ function appendPicture(apod) {
   container.appendChild(img);
   img.classList.add('backgroundPhoto');
   } else if (apod.media_type === "video") {
-    console.log("append2");
+    // console.log("append2");
     appendPicture2();
   }
   // console.log("mars stuff", marsPhoto.photos);
 }
 
 function appendPicture2(marsPhoto) {
-if(typeof(marsPhoto) ==="undefined"){
-  return null
-} else{
-
+  if(typeof(marsPhoto) ==="undefined"){
+    return null;
+  } else {
     var photo2 = marsPhoto.photos;
     var img2 = document.createElement("img");
     container.appendChild(img2);
     img2.src = photo2[1].img_src;
     img2.classList.add('backgroundPhoto');
-  console.log("mars stuff", photo2[0].img_src);
+  // console.log("mars stuff", photo2[0].img_src);
+  }
 }
-}
 
-
-
-// function appendPicture2(marsPhoto) {
-//   if (typeof marsPhoto !== 'undefined') {
-//     // console.log("mars stuff", marsPhoto);
-//     var photo2 = marsPhoto.photos;
-//     var img2 = document.createElement('img2');
-//     img2.src = photo2;
-//     container.appendChild(img2);
-//     img2.classList.add('backgroundPhoto');
-//     }
-// }
 
 /*APOD*/
 $.ajax ({
@@ -57,7 +44,7 @@ $.ajax ({
   method: "GET",
   success: function(apod){
     appendPicture(apod);
-    console.log(apod);
+    // console.log(apod);
   },
   error: console.log,
 })
@@ -67,7 +54,7 @@ $.ajax ({
   method: "GET",
   success: function (marsPhoto) {
     appendPicture2(marsPhoto);
-    console.log(marsPhoto);
+    // console.log(marsPhoto);
   },
   error: console.log,
 })
