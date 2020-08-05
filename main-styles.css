@@ -38,3 +38,12 @@
   position: absolute;
   z-index: -1;
 }
+
+.info-modal {
+  position: fixed;
+
+}
+
+.hidden {
+  display: none;
+}
