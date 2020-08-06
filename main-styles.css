@@ -13,25 +13,42 @@
   text-align: center;
 }
 
+/* .main-table-container {
+  display: flex;
+  justify-content: center;
+} */
+
+.main-table-container {
+  margin-top: 7%;
+}
+
 .main-table {
   display: flex;
   justify-content: center;
+  color: rgb(196, 4, 196);
+
   /* position: absolute;
   z-index: 10000; */
+}
 
+.tbody {
+  width: 60%;
 }
 
 .main-table-row {
-  background-color: rgba(133, 2, 133, 0.699);
-  box-shadow: 0px 0px 13px 3px rgba(133, 2, 133, 0.63);
+  /* background-color: rgba(133, 2, 133, 0.699); */
+  width: 80%;
+  /* box-shadow: 0px 0px 13px 3px rgba(133, 2, 133, 0.63); */
 }
 
 .main-table-data {
   height: 15vh;
   border: 1px rgba(133, 2, 133, 0.425);
+  width: 15%;
   box-shadow: 0px 0px 13px 3px rgba(133, 2, 133, 0.63);
-  color: black;
-
+  color: rgb(233, 3, 233);
+  font-weight: bold;
+  /* text-shadow: 0px 0px 15px rgb(128, 0, 128); */
 }
 
 .backgroundPhoto {
@@ -45,9 +62,9 @@
 .info-modal {
   position: fixed;
   width: 50%;
-  height: 95vh;
-  margin-left: 15%;
-  background-color: rgb(68, 68, 255);
+  height: 100vh;
+  margin-left: 25%;
+  background-color: rgb(138, 0, 138);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -55,6 +72,7 @@
   margin-top: none;
   padding-top: 0%;
   align-items: center;
+  color: white;
 }
 
 .asteroidDataTable {
@@ -62,9 +80,29 @@
 }
 
 .asteroid-name {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  box-shadow: 10px rgba(0, 0, 0, 0.527);
+}
+
+.orbital-diagram-text {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.link-instructions {
+  font-size: 12px;
+}
+
+.is-hazardous-text {
+  font-style: bold;
   padding-bottom: none;
+}
+
+.y-n-text {
+  font-style: bold;
 }
 
 .hidden {
@@ -79,4 +117,74 @@
 .spongebob {
   width: 40%;
   margin-bottom: 2%;
+}
+
+.back-button {
+  padding: 10px 30px;
+  background: rgb(128, 1, 43);
+  border: 2px solid black;
+  box-shadow: 0px 0px 3px 3px solid black;
+}
+.back-button:active {
+  transform: translateY(1px);
+}
+
+.ast1 {
+  background-image: url("images/504796_pia00135_orig_890496.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast2 {
+  background-image: url("images/Asteroid_243_Ida_and_its_newly_discovered_moon_Dactyl_pillars.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast3 {
+  background-image: url("images/asteroid_nasa_1595068349067.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast4 {
+  background-image: url("images/Asteroid-news-large-space-rocks-flying-Earth-NASA-asteroid-tracker-nasa-news-1194086.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast5 {
+ background-image: url("images/bennu_1200x900.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast6 {
+  background-image: url("images/sn-apophisH.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast7 {
+  background-image: url("images/Eros_-_PIA02923_\(color\).jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast8 {
+  background-image: url("images/interstellar_asteroid_faq_0.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast9 {
+  background-image: url("images/istock-1012318340-1.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.ast10 {
+  background-image: url("images/oumuamua_1i_2017_u1.png");
+  background-size: cover;
+  background-repeat: none;
 }

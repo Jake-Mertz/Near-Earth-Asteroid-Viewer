@@ -9,36 +9,40 @@
 
       <h1 class="main-head">Asteroids!</h1>
 
-      <!-- <img class="APOD" src="photo" alt="APOD"/> -->
-
       <div class="main-table-container">
           <table class="main-table">
-            <tr class="main-table-row">
-              <td id="asteroid1table" class="main-table-data"></td>
-              <td id="asteroid2table" class="main-table-data"></td>
-            </tr>
-            <tr class="main-table-row">
-              <td id="asteroid3table" class="main-table-data"></td>
-              <td id="asteroid4table" class="main-table-data"></td>
-            </tr>
-            <tr class="main-table-row">
-              <td id="asteroid5table" class="main-table-data"></td>
-              <td id="asteroid6table" class="main-table-data"></td>
-            </tr>
-            <tr class="main-table-row">
-              <td id="asteroid7table" class="main-table-data"></td>
-              <td id="asteroid8table" class="main-table-data"></td>
-            </tr>
-            <tr class="main-table-row">
-              <td id="asteroid9table" class="main-table-data"></td>
-              <td id="asteroid10table" class="main-table-data"></td>
-            </tr>
+            <tbody class="tbody">
+              <tr class="main-table-row">
+                <td id="asteroid1table" class="main-table-data ast1"></td>
+                <td id="asteroid2table" class="main-table-data ast2"></td>
+                <td id="asteroid3table" class="main-table-data ast3"></td>
+                <td id="asteroid4table" class="main-table-data ast4"></td>
+              </tr>
+              <!-- <tr class="main-table-row">
+
+              </tr> -->
+              <tr class="main-table-row">
+                <td id="asteroid5table" class="main-table-data ast5"></td>
+                <td id="asteroid6table" class="main-table-data ast6"></td>
+                <td id="asteroid7table" class="main-table-data ast7"></td>
+                <td id="asteroid8table" class="main-table-data ast8"></td>
+              </tr>
+              <!-- <tr class="main-table-row">
+
+              </tr> -->
+              <tr class="main-table-row">
+                <td></td>
+                <td id="asteroid9table" class="main-table-data ast9"></td>
+                <td id="asteroid10table" class="main-table-data ast10"></td>
+              </tr>
+            </tbody>
           </table>
       </div>
 
       <div class="info-modal hidden" id="info-modal">
         <p id="asteroid-name" class="asteroid-name"></p>
-        <p class="orbital-diagram-link">Orbital Diagram:</p>
+        <p class="orbital-diagram-text">Orbital Diagram:</p>
+        <p class="link-instructions">(follow link &amp click on "Orbit Diagram")</p>
         <p id="orbital-diagram-link"></p>
           <table id="asteroidDataTable" class="asteroidDataTable">
             <tr>
@@ -66,8 +70,8 @@
               <td id="miss-distance-data"></td>
             </tr>
           </table>
-          <p>Is this asteroid hazardous?</p>
-          <p id="yes-or-no"></p>
+          <p class="is-hazardous-text">Is this asteroid hazardous?</p>
+          <p id="yes-or-no" class="y-n-text"></p>
           <img src="images/peopleRunningFromAsteroid.jpg" alt="People running from an asteroid" class="asteroid-danger-image hidden" id="asteroid-danger"/>
           <img src="images/spongebob chillin.jpg" alt="spongebob and friends chillin out" class="spongebob hidden" id="spongebob"/>
           <button class="back-button" id="backButton">Back</button>
