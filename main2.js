@@ -109,22 +109,3 @@ function mainTable(asteroidTableData) {
       infoModal.classList.remove('hidden');
     }
 }
-
-
-
-// function fillAsteroidPage() {
-
-//     }
-//   }
-// }
-
-      // asteroid1.addEventListener('click', function() {});
-    // asteroid2.addEventListener('click', function ());
-    // asteroid3.addEventListener('click', function ());
-    // asteroid4.addEventListener('click', function ());
-    // asteroid5.addEventListener('click', function ());
-    // asteroid6.addEventListener('click', function ());
-    // asteroid7.addEventListener('click', function ());
-    // asteroid8.addEventListener('click', function ());
-    // asteroid9.addEventListener('click', function ());
-    // asteroid10.addEventListener('click', function ());
