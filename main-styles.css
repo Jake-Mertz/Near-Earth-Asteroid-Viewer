@@ -62,21 +62,24 @@
 .info-modal {
   position: fixed;
   width: 50%;
-  height: 100vh;
+  height: 8vh;
   margin-left: 25%;
-  background-color: rgb(138, 0, 138);
+  background-color: rgba(138, 0, 138, 0.8);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: none;
-  padding-top: 0%;
+  margin-top: 12%;
+  padding-top: 28%;
+  padding-bottom: 2%;
   align-items: center;
   color: white;
+  overflow: scroll;
 }
 
 .asteroidDataTable {
   width: 80%;
+  text-shadow: 0px 0px 20px black;
 }
 
 .asteroid-name {
@@ -112,11 +115,13 @@
 .asteroid-danger-image {
   width: 40%;
   margin-bottom: 2%;
+  filter: opacity(80%);
 }
 
 .spongebob {
   width: 40%;
   margin-bottom: 2%;
+  filter: opacity(80%);
 }
 
 .back-button {
@@ -124,6 +129,7 @@
   background: rgb(128, 1, 43);
   border: 2px solid black;
   box-shadow: 0px 0px 3px 3px solid black;
+  filter: opacity(80%);
 }
 .back-button:active {
   transform: translateY(1px);
