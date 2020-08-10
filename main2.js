@@ -158,24 +158,24 @@ function mainTable(asteroidTableData) {
     var yesOrNo = document.createElement('p');
 
 
-    // if (asteroidObject.close_approach_data !== undefined) {
-    //   relativeVelocityData.textContent = asteroidObject.close_approach_data[0].relative_velocity.kilometers_per_hour + " Km/hr";
-    //   missDistanceData.textContent = asteroidObject.close_approach_data[0].miss_distance.kilometers + " Kilometers";
-    // } else {
-    //   relativeVelocityData.textContent = 'N/A';
-    //   missDistanceData.textContent = 'N/A';
-    // }
+    if (asteroidObject.close_approach_data !== undefined) {
+      relativeVelocityData.textContent = asteroidObject.close_approach_data[0].relative_velocity.kilometers_per_hour + " Km/hr";
+      missDistanceData.textContent = asteroidObject.close_approach_data[0].miss_distance.kilometers + " Kilometers";
+    } else {
+      relativeVelocityData.textContent = 'N/A';
+      missDistanceData.textContent = 'N/A';
+    }
 
 
 
 
     // if (asteroidObject.is_potentially_hazardous_asteroid === true) {
     //   yesOrNo.textContent = "Yes!";
-      // asteroidDanger.classList.remove('hidden');
+    //   asteroidDanger.classList.remove('hidden');
 
     // } else {
     //   yesOrNo.textContent = "No!"
-      // spongebob.classList.remove('hidden');
+    //   spongebob.classList.remove('hidden');
     // }
 
     // console.log(asteroidTableArray[i]);
