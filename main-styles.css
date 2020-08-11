@@ -115,10 +115,14 @@ body {
 
 .is-hazardous-text {
   font-style: bold;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
 }
 
 .y-n-text {
   font-style: bold;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
 }
 
 .hidden {
