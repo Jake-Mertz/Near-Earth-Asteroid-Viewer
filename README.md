@@ -7,6 +7,8 @@ A hackathon project utilizing data from two public APIs.
 - jQuery
 - HTML5
 - CSS3
+- NASA APOD
+- NASA Asteroids NeoWs
 
 ## Features
 
