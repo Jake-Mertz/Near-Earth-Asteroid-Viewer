@@ -1,4 +1,4 @@
-# api-hackathon
+# Near-Earth Asteroid Viewer
 A hackathon project utilizing data from two public APIs.
 
 ## Technologies Used
