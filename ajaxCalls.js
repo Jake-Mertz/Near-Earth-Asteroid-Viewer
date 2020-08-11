@@ -6,11 +6,13 @@ var container = document.getElementById('container');
 
 function appendPicture(apod) {
     if (apod.media_type !== "video") {
-  var photo = apod.hdurl;
-  var img = document.createElement('img');
-  img.src = photo;
-  container.appendChild(img);
-  img.classList.add('backgroundPhoto');
+  // var photo = apod.hdurl;
+  // var img = document.createElement('img');
+  // img.src = photo;
+  // container.appendChild(img);
+  // img.classList.add('main-background-photo');
+    container.setAttribute('style', `background-image: url(${apod.hdurl})`);
+    console.log(apod.hdurl);
   } else if (apod.media_type === "video") {
     appendPicture2();
   }
@@ -24,9 +26,28 @@ function appendPicture2(marsPhoto) {
     var img2 = document.createElement("img");
     container.appendChild(img2);
     img2.src = photo2[1].img_src;
-    img2.classList.add('backgroundPhoto');
+    img2.classList.add('main-background-photo');
   }
 }
+
+// function appendPicture2(marsPhoto) {
+//   if (typeof (marsPhoto) === "undefined") {
+//     return null;
+//   } else {
+//     var photo2 = marsPhoto.photos;
+//     var img2 = document.createElement("img");
+//     container.appendChild(img2);
+//     for (var i = 0; i < marsPhoto.length; i++) {
+//       if (marsPhoto[Math.floor(Math.random() * marsPhoto.length)].width > 1000) {
+//         return marsPhoto[i];
+//       }
+//     }
+//     img2.src = photo2[i].img_src;
+//     img2.classList.add('main-background-photo');
+//   }
+// }
+
+
 
 
 /*APOD*/
