@@ -1,89 +1,64 @@
-.container {
-  width: 100%;
-  max-width: 1250px;
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  /* text-align: center; */
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.row {
-  display: block;
+.container {
   width: 100%;
-  max-width: 1250px;
-  height: 20vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 .main-head {
-  /* margin-left: 50%; */
   margin: auto;
-  color: purple;
-  /* display: block;
-  width: 100%; */
-}
-
-/* .background-image {
-  background-image: ;
-} */
-
-/* .main-head {
+  text-shadow: 0px 0px 12px white;
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 0;
+  padding-top: 4%;
   text-align: center;
-} */
-
-.asteroid-main-table {
-  height: 40vh;
-  max-width: 700px;
-  display: flex;
-  justify-content: center;
-  margin-top: 20%;
-  color: rgb(196, 4, 196);
-  font-weight: bold;
-  border: 1px rgba(133, 2, 133, 0.425);
-  box-shadow: 0px 0px 13px 3px rgba(133, 2, 133, 0.63);
-  background-color: black;
-  overflow-x: scroll;
-  overflow-y: scroll;
 }
-
-/* .main-table-container {
-  display: flex;
-  justify-content: center;
-} */
 
 .main-table-container {
-  margin-top: 7%;
+  margin-top: 4%;
 }
 
-.main-table {
-  display: flex;
-  justify-content: center;
+
+.asteroid-main-table {
+  max-width: 40%;
+  margin: auto;
   color: rgb(196, 4, 196);
-
-  /* position: absolute;
-  z-index: 10000; */
+  border: 1px rgba(133, 2, 133, 0.425);
+  text-shadow: 0px 0px 5px purple;
+  padding-bottom: 4%;
 }
 
-.tbody {
-  width: 60%;
-}
-
-.main-table-row {
-  /* background-color: rgba(133, 2, 133, 0.699); */
-  width: 80%;
-  /* box-shadow: 0px 0px 13px 3px rgba(133, 2, 133, 0.63); */
-}
-
-.main-table-data {
+.main-table-element {
   height: 15vh;
   border: 1px rgba(133, 2, 133, 0.425);
-  width: 15%;
+  width: 12%;
+  text-align: center;
   box-shadow: 0px 0px 13px 3px rgba(133, 2, 133, 0.63);
   color: rgb(233, 3, 233);
   font-weight: bold;
-  /* text-shadow: 0px 0px 15px rgb(128, 0, 128); */
+  font-size: 14px;
+  background-image: url(images/stars2.png);
+  background-repeat: none;
+  background-size: cover;
+}
+.main-table-element:hover {
+  color: white;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
-.backgroundPhoto {
+.main-table-text {
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.main-background-photo {
   width: 100%;
   max-width: 1250px;
   height: 1000px;
@@ -93,54 +68,53 @@
 
 .info-modal {
   position: fixed;
+  left: 25%;
   width: 50%;
-  height: 8vh;
-  margin-left: 25%;
+  height: 38vh;
+  bottom: 25%;
   background-color: rgba(138, 0, 138, 0.8);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 12%;
-  padding-top: 28%;
-  padding-bottom: 2%;
-  align-items: center;
+  padding-bottom: 1.8%;
   color: white;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.asteroid-data-table {
-  width: 80%;
-  text-shadow: 0px 0px 20px black;
-  /* display: flex;
-  flex-direction: column; */
+.modal-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  font-style: bold;
 }
 
-.asteroid-table-data {
-  width: 100%;
-  /* display: inline-block; */
+.asteroid-modal-data-table {
+  /* width: 80%; */
+  text-shadow: 0px 0px 10px black;
+  margin: auto;
+  margin-top: 5%;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-.asteroid-name {
-  font-size: 25px;
+/* .asteroid-name {
+  font-size: 35px;
   font-weight: bold;
-  margin-bottom: 0px;
-  margin-top: 5px;
-  box-shadow: 10px rgba(0, 0, 0, 0.527);
+} */
+
+.orbital-link-text {
+  font-size: 18px;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  /* text-shadow: 0px 0px 20px white; */
+  color: rgb(0, 255, 221);
 }
 
-.orbital-diagram-text {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
-.link-instructions {
+.link-directions {
   font-size: 12px;
+  line-height: 1px;
 }
 
 .is-hazardous-text {
   font-style: bold;
-  padding-bottom: none;
 }
 
 .y-n-text {
@@ -152,18 +126,18 @@
 }
 
 .asteroid-danger-image {
-  width: 40%;
-  margin-bottom: 2%;
+  width: 35%;
   filter: opacity(80%);
 }
 
-.spongebob {
+.asteroid-safe-image {
   width: 40%;
   margin-bottom: 2%;
   filter: opacity(80%);
 }
 
 .back-button {
+  margin-top: none;
   padding: 10px 30px;
   background: rgb(128, 1, 43);
   border: 2px solid black;
@@ -173,63 +147,31 @@
 .back-button:active {
   transform: translateY(1px);
 }
-
-/* .ast1 {
-  background-image: url("images/504796_pia00135_orig_890496.jpg");
-  background-size: cover;
-  background-repeat: none;
+.back-button:hover {
+  cursor: pointer;
 }
 
-.ast2 {
-  background-image: url("images/Asteroid_243_Ida_and_its_newly_discovered_moon_Dactyl_pillars.jpg");
-  background-size: cover;
-  background-repeat: none;
+
+@media only screen and (max-width: 800px) {
+  .asteroid-main-table {
+    max-width: 60%;
+  }
+  .info-modal {
+    width: 60%;
+    left: 20%;
+  }
 }
 
-.ast3 {
-  background-image: url("images/asteroid_nasa_1595068349067.jpg");
-  background-size: cover;
-  background-repeat: none;
-}
+@media only screen and (max-width: 600px) {
+  /* .main-head {
+    font-size: 30px;
+  } */
+  .asteroid-main-table {
+    max-width: 75%;
+  }
+  .info-modal {
+    width: 80%;
+    left: 10%;
+  }
 
-.ast4 {
-  background-image: url("images/Asteroid-news-large-space-rocks-flying-Earth-NASA-asteroid-tracker-nasa-news-1194086.jpg");
-  background-size: cover;
-  background-repeat: none;
 }
-
-.ast5 {
- background-image: url("images/bennu_1200x900.jpg");
-  background-size: cover;
-  background-repeat: none;
-}
-
-.ast6 {
-  background-image: url("images/sn-apophisH.jpg");
-  background-size: cover;
-  background-repeat: none;
-}
-
-.ast7 {
-  background-image: url("images/Eros_-_PIA02923_\(color\).jpg");
-  background-size: cover;
-  background-repeat: none;
-}
-
-.ast8 {
-  background-image: url("images/interstellar_asteroid_faq_0.jpg");
-  background-size: cover;
-  background-repeat: none;
-}
-
-.ast9 {
-  background-image: url("images/istock-1012318340-1.jpg");
-  background-size: cover;
-  background-repeat: none;
-}
-
-.ast10 {
-  background-image: url("images/oumuamua_1i_2017_u1.png");
-  background-size: cover;
-  background-repeat: none;
-} */
