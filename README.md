@@ -1,5 +1,5 @@
 # Near-Earth Asteroid Viewer
-A hackathon project utilizing data from two public APIs.
+A hackathon project utilizing data from two public APIs. Provides a user-friendly interface that displays NASA's Astronomy Photo of the Day, and allows the user to browse a set of near-Earth asteroid data.
 
 ## Technologies Used
 
