@@ -4,7 +4,7 @@ var asteroidTable = document.getElementById('asteroid-table-row');
 var tableImage = document.getElementById('table-background-image');
 
 function mainTable(asteroidTableData) {
-  // console.log(asteroidTableData.near_earth_objects);
+  console.log(asteroidTableData.near_earth_objects);
 
   var nearEarthObjects = asteroidTableData.near_earth_objects;
 
@@ -12,6 +12,8 @@ function mainTable(asteroidTableData) {
   mainTable.classList.add('asteroid-main-table');
   container.append(mainTable);
   asteroidTable.append(mainTable);
+
+
 
 
   for (var i = 0; i < nearEarthObjects.length; i++) {
@@ -23,24 +25,40 @@ function mainTable(asteroidTableData) {
         return function () {
           var modal = document.getElementById(id);
           modal.classList.remove('hidden');
-          modal.scrollTop = 0;
+          modal.querySelector('.info-modal').scrollTop = 0;
         }
       })());
 
       mainTableElement.classList.add('main-table-element');
       mainTableElement.append(tableImage);
 
+      var modalShadow = document.createElement('div');
+      modalShadow.classList.add('modal-shadow');
+      modalShadow.classList.add('hidden');
+      modalShadow.setAttribute('id', modalId);
+      container.append(modalShadow);
+
 
       var infoModal = document.createElement('div');
-      infoModal.setAttribute('id', modalId);
+      infoModal.onclick = function (event) {
+        event.stopPropagation();
+      }
       var modalTable = document.createElement('table');
 
-      infoModal.classList.add('hidden');
+      // infoModal.classList.add('hidden');
       infoModal.classList.add('info-modal');
       modalTable.classList.add('asteroid-modal-data-table')
-      container.append(infoModal);
+      // container.append(infoModal);
 
 
+      modalShadow.onclick = (function () {
+        var id = modalId;
+        return function () {
+          document.getElementById(id).classList.add('hidden');
+        }
+      })();
+
+      modalShadow.append(infoModal);
 
       if (i % 3 === 0) {
         var newRow = document.createElement('tr');
@@ -69,7 +87,7 @@ function mainTable(asteroidTableData) {
       infoModal.append(orbitalDiagramLink);
 
       var linkDirections = document.createElement('p');
-      linkDirections.textContent = ('Follow link & click "Orbital Diagram"');
+      linkDirections.textContent = ('Follow link & click "Orbit Diagram"');
       linkDirections.classList.add('link-directions');
       infoModal.append(linkDirections);
 
@@ -120,9 +138,11 @@ function mainTable(asteroidTableData) {
       var missDistanceData = document.createElement('td');
       var modalTableRow6Text = document.createElement('td');
       modalTableRow6Text.textContent = "Miss Distance: "
-      if (nearEarthObjects[i].close_approach_data === true) {
-        relativeVelocityData.textContent = nearEarthObjects[i].close_approach_data[0].relative_velocity.kilometers_per_hour + " Km/hr";
-        missDistanceData.textContent = nearEarthObjects[i].close_approach_data[0].miss_distance.kilometers + " Kilometers";
+      if (nearEarthObjects[i].close_approach_data[0]) {
+        var velocity = parseFloat(nearEarthObjects[i].close_approach_data[0].relative_velocity.kilometers_per_hour);
+        relativeVelocityData.textContent = velocity.toFixed(4) + " Km/hr";
+        var missDistance = parseFloat(nearEarthObjects[i].close_approach_data[0].miss_distance.kilometers);
+        missDistanceData.textContent = missDistance.toFixed(4) + " Kilometers";
           } else {
           relativeVelocityData.textContent = "N/A";
           missDistanceData.textContent = "N/A";
@@ -138,6 +158,7 @@ function mainTable(asteroidTableData) {
 
       var dangerousText = document.createElement('p');
       dangerousText.textContent = "Is this asteroid hazardous?"
+      dangerousText.classList.add('is-hazardous-text');
       infoModal.append(dangerousText);
 
       var dangerImage = document.createElement('IMG');
@@ -153,6 +174,7 @@ function mainTable(asteroidTableData) {
 
 
       var yesOrNo = document.createElement('p');
+      yesOrNo.classList.add('y-n-text');
         if (nearEarthObjects[i].is_potentially_hazardous_asteroid === true) {
           yesOrNo.textContent = "Yes!";
           infoModal.append(dangerImage);
@@ -176,8 +198,6 @@ function mainTable(asteroidTableData) {
       backButton.classList.add('back-button');
       backButton.textContent = "Back";
       infoModal.append(backButton);
-
-
 
   }
 }
