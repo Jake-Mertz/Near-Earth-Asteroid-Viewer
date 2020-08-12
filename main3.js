@@ -14,6 +14,8 @@ function mainTable(asteroidTableData) {
   asteroidTable.append(mainTable);
 
 
+
+
   for (var i = 0; i < nearEarthObjects.length; i++) {
 
       var mainTableElement = document.createElement('td');
@@ -23,24 +25,40 @@ function mainTable(asteroidTableData) {
         return function () {
           var modal = document.getElementById(id);
           modal.classList.remove('hidden');
-          modal.scrollTop = 0;
+          modal.querySelector('.info-modal').scrollTop = 0;
         }
       })());
 
       mainTableElement.classList.add('main-table-element');
       mainTableElement.append(tableImage);
 
+      var modalShadow = document.createElement('div');
+      modalShadow.classList.add('modal-shadow');
+      modalShadow.classList.add('hidden');
+      modalShadow.setAttribute('id', modalId);
+      container.append(modalShadow);
+
 
       var infoModal = document.createElement('div');
-      infoModal.setAttribute('id', modalId);
+      infoModal.onclick = function (event) {
+        event.stopPropagation();
+      }
       var modalTable = document.createElement('table');
 
-      infoModal.classList.add('hidden');
+      // infoModal.classList.add('hidden');
       infoModal.classList.add('info-modal');
       modalTable.classList.add('asteroid-modal-data-table')
-      container.append(infoModal);
+      // container.append(infoModal);
 
 
+      modalShadow.onclick = (function () {
+        var id = modalId;
+        return function () {
+          document.getElementById(id).classList.add('hidden');
+        }
+      })();
+
+      modalShadow.append(infoModal);
 
       if (i % 3 === 0) {
         var newRow = document.createElement('tr');
@@ -180,8 +198,6 @@ function mainTable(asteroidTableData) {
       backButton.classList.add('back-button');
       backButton.textContent = "Back";
       infoModal.append(backButton);
-
-
 
   }
 }
