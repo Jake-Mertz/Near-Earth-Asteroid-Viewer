@@ -38,9 +38,6 @@ $.ajax ({
   url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=ff79LuQuAbF1iHJP6CgchroWeDvl9xDpsyzMYXc9",
   method: "GET",
   success: console.log,
-  // function (marsPhoto) {
-  //   appendPicture2(marsPhoto);
-  // },
   error: console.log,
 })
 
