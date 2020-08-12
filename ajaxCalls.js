@@ -6,13 +6,7 @@ var container = document.getElementById('container');
 
 function appendPicture(apod) {
     if (apod.media_type !== "video") {
-  // var photo = apod.hdurl;
-  // var img = document.createElement('img');
-  // img.src = photo;
-  // container.appendChild(img);
-  // img.classList.add('main-background-photo');
     container.setAttribute('style', `background-image: url(${apod.hdurl})`);
-    console.log(apod.hdurl);
   } else if (apod.media_type === "video") {
     appendPicture2();
   }
@@ -30,26 +24,6 @@ function appendPicture2(marsPhoto) {
   }
 }
 
-// function appendPicture2(marsPhoto) {
-//   if (typeof (marsPhoto) === "undefined") {
-//     return null;
-//   } else {
-//     var photo2 = marsPhoto.photos;
-//     var img2 = document.createElement("img");
-//     container.appendChild(img2);
-//     for (var i = 0; i < marsPhoto.length; i++) {
-//       if (marsPhoto[Math.floor(Math.random() * marsPhoto.length)].width > 1000) {
-//         return marsPhoto[i];
-//       }
-//     }
-//     img2.src = photo2[i].img_src;
-//     img2.classList.add('main-background-photo');
-//   }
-// }
-
-
-
-
 /*APOD*/
 $.ajax ({
   url: "https://api.nasa.gov/planetary/apod?date="+currentDay+"&api_key=ff79LuQuAbF1iHJP6CgchroWeDvl9xDpsyzMYXc9",
@@ -64,14 +38,10 @@ $.ajax ({
   url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=ff79LuQuAbF1iHJP6CgchroWeDvl9xDpsyzMYXc9",
   method: "GET",
   success: console.log,
-  // function (marsPhoto) {
-  //   appendPicture2(marsPhoto);
-  // },
   error: console.log,
 })
 
 /*Browse the overall asteroid data-set*/
-/* interesting data to pull: diameter, is potentially hazardous, first observation date, last observation date, relative velocity (km/hr), miss distance*/
 $.ajax({
   url: "https://api.nasa.gov/neo/rest/v1/neo/browse/?api_key=ff79LuQuAbF1iHJP6CgchroWeDvl9xDpsyzMYXc9",
   method: "GET",

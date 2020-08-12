@@ -4,17 +4,12 @@ var asteroidTable = document.getElementById('asteroid-table-row');
 var tableImage = document.getElementById('table-background-image');
 
 function mainTable(asteroidTableData) {
-  console.log(asteroidTableData.near_earth_objects);
-
   var nearEarthObjects = asteroidTableData.near_earth_objects;
 
   var mainTable = document.createElement('table');
   mainTable.classList.add('asteroid-main-table');
   container.append(mainTable);
   asteroidTable.append(mainTable);
-
-
-
 
   for (var i = 0; i < nearEarthObjects.length; i++) {
 
@@ -45,11 +40,8 @@ function mainTable(asteroidTableData) {
       }
       var modalTable = document.createElement('table');
 
-      // infoModal.classList.add('hidden');
       infoModal.classList.add('info-modal');
       modalTable.classList.add('asteroid-modal-data-table')
-      // container.append(infoModal);
-
 
       modalShadow.onclick = (function () {
         var id = modalId;
@@ -66,18 +58,15 @@ function mainTable(asteroidTableData) {
       newRow.append(mainTableElement);
       mainTable.append(newRow);
 
-
       var asteroidName = document.createElement('p');
       asteroidName.textContent = nearEarthObjects[i].name;
       asteroidName.classList.add('main-table-text');
       mainTableElement.append(asteroidName);
 
-
       var asteroidName1 = document.createElement('h1');
       asteroidName1.textContent = nearEarthObjects[i].name;
       asteroidName1.classList.add('modal-title');
       infoModal.append(asteroidName1);
-
 
       var orbitalDiagramLink = document.createElement('a');
       orbitalDiagramLink.setAttribute('href', nearEarthObjects[i].nasa_jpl_url);
@@ -92,7 +81,6 @@ function mainTable(asteroidTableData) {
       infoModal.append(linkDirections);
 
       infoModal.append(modalTable);
-
 
       var modalTableRow1 = document.createElement('tr');
       var asteroidDiameterDataMin = document.createElement('td');
@@ -155,7 +143,6 @@ function mainTable(asteroidTableData) {
       modalTable.append(modalTableRow5);
       modalTable.append(modalTableRow6);
 
-
       var dangerousText = document.createElement('p');
       dangerousText.textContent = "Is this asteroid hazardous?"
       dangerousText.classList.add('is-hazardous-text');
@@ -166,12 +153,10 @@ function mainTable(asteroidTableData) {
       dangerImage.classList.add('asteroid-danger-image');
       dangerImage.setAttribute('src', "images/peopleRunningFromAsteroid.jpg");
 
-
       var safeImage = document.createElement('IMG');
       safeImage.classList.add('hidden');
       safeImage.classList.add('asteroid-safe-image');
       safeImage.setAttribute('src', "images/perseids2018-1.jpg");
-
 
       var yesOrNo = document.createElement('p');
       yesOrNo.classList.add('y-n-text');
@@ -186,7 +171,6 @@ function mainTable(asteroidTableData) {
           safeImage.classList.remove('hidden');
         }
         infoModal.append(yesOrNo);
-
 
       var backButton = document.createElement('button');
       backButton.onclick = (function () {
