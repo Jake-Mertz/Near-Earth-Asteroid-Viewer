@@ -10,6 +10,10 @@ A hackathon project utilizing data from two public APIs. Provides a user-friendl
 - NASA APOD
 - NASA Asteroids NeoWs
 
+## Live Demo
+
+Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.github.io/Near-Earth-Asteroid-Viewer/)
+
 ## Features
 
 - User can browse a user-friendly interface of data for near-Earth asteroids maintained by NASA's Jet Propulsion Laboratory.
