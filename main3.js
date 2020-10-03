@@ -28,8 +28,7 @@ function mainTable(asteroidTableData) {
       mainTableElement.append(tableImage);
 
       var modalShadow = document.createElement('div');
-      modalShadow.classList.add('modal-shadow');
-      modalShadow.classList.add('hidden');
+      modalShadow.classList.add('modal-shadow', 'hidden');
       modalShadow.setAttribute('id', modalId);
       container.append(modalShadow);
 
@@ -71,7 +70,7 @@ function mainTable(asteroidTableData) {
       var orbitalDiagramLink = document.createElement('a');
       orbitalDiagramLink.setAttribute('href', nearEarthObjects[i].nasa_jpl_url);
       orbitalDiagramLink.setAttribute('target', "_blank");
-      orbitalDiagramLink.textContent = "Orbital Diagram";
+      orbitalDiagramLink.textContent = "Orbit Diagram";
       orbitalDiagramLink.classList.add('orbital-link-text');
       infoModal.append(orbitalDiagramLink);
 
