@@ -4,7 +4,7 @@ A hackathon project utilizing data from two public APIs. Provides a user-friendl
 ## Technologies Used
 
 - Javascript
-- jQuery
+- jQuery Ajax
 - HTML5
 - CSS3
 - NASA APOD
@@ -16,7 +16,7 @@ Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.gith
 
 ## Features
 
-- User can browse a user-friendly interface of data for near-Earth asteroids maintained by NASA's Jet Propulsion Laboratory.
+- User can browse a user-friendly and fun interface of data for near-Earth asteroids maintained by NASA's Jet Propulsion Laboratory.
 - Website displays NASA's Astronomy Picture of the Day as its background image.
 
 ### Getting Started
@@ -26,3 +26,4 @@ Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.gith
     ```shell
     git clone https://github.com/Jake-Mertz/hackathon-2.git
     ```
+2. Start the project. Once started you can view the application by opening the index.html file in your browser.
