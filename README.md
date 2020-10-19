@@ -17,6 +17,7 @@ Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.gith
 ## Features
 
 - User can click on individual asteroids and view interesting data pertaining to them.
+- User is provided with links to view three-dimensional graphic models of asteroid orbits over time. 
 - Website displays NASA's Astronomy Picture of the Day as its background image.
 
 ### Getting Started
