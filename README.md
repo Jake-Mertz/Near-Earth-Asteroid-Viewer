@@ -1,5 +1,5 @@
 # Near-Earth Asteroid Viewer
-A hackathon project utilizing data from two public APIs. Provides a user-friendly interface that displays NASA's Astronomy Photo of the Day, and allows the user to browse a set of near-Earth asteroid data.
+A hackathon project utilizing data from two public APIs. Provides a user-friendly and fun interface that displays NASA's Astronomy Photo of the Day, and allows the user to browse a set of near-Earth asteroid data maintained by NASA's Jet Propulsion Laboratory. 
 
 ## Technologies Used
 
@@ -16,7 +16,7 @@ Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.gith
 
 ## Features
 
-- User can browse a user-friendly and fun interface of data for near-Earth asteroids maintained by NASA's Jet Propulsion Laboratory.
+- User can click on individual asteroids and view interesting data pertaining to them.
 - Website displays NASA's Astronomy Picture of the Day as its background image.
 
 ### Getting Started
