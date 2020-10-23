@@ -22,7 +22,7 @@ Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.gith
 
 ## Preview
 
-/asteroids-demo-github.gif
+(/asteroids-demo-github.gif)
 
 ### Getting Started
 
