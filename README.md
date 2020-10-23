@@ -19,6 +19,10 @@ Try the application live at [Near-Earth Asteroid Viewer](https://jake-mertz.gith
 - User can browse a user-friendly and fun interface of data for near-Earth asteroids maintained by NASA's Jet Propulsion Laboratory.
 - Website displays NASA's Astronomy Picture of the Day as its background image.
 
+## Preview
+
+![asteroids preview gif](asteroids-demo-github.gif)
+
 ### Getting Started
 
 1. Clone the repository.
